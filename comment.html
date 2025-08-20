@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comment Box</title>
+    <style>
+      .comment {
+        border: 1px solid orange;
+        padding: 4px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div id="comment-container">
+          <h1>Your Valuable Comment is here</h1>
+          <p class="comment">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta in
+            accusantium commodi totam eum eaque reprehenderit saepe, dolorem
+            natus! Inventore velit nam, eveniet quo perferendis consequatur!
+            Nesciunt ad neque labore.
+          </p>
+          <p class="comment">
+            Similique autem libero sit tenetur ipsum dolorem qui esse, ipsa,
+            facilis dolores adipisci recusandae provident architecto debitis
+            deleniti labore eligendi reprehenderit quam hic tempora consequatur
+            temporibus necessitatibus modi. Vero, omnis!
+          </p>
+          <p class="comment">
+            Et voluptas animi ullam dolore sit, ad, officia maiores placeat
+            tempora nesciunt saepe sapiente delectus quibusdam alias commodi?
+            Excepturi, aperiam labore? Temporibus velit illum odit iste?
+            Inventore cum dolorem eaque.
+          </p>
+        </div>
+        <!-- form -->
+        <form>
+          <textarea
+            placeholder="write here your comment"
+            id="input-value"
+            rows="5"
+            cols="69"
+          ></textarea>
+          <button id="btn-post">Post Comment</button>
+        </form>
+      </section>
+    </main>
+    <script>
+      document
+        .getElementById("btn-post")
+        .addEventListener("click", function () {
+          event.preventDefault();
+        });
+    </script>
+    <script src="js/comment.js"></script>
+  </body>
+</html>
