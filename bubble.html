@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bubble</title>
+  </head>
+  <style>
+    .item-container {
+      border: 1px solid green;
+      padding: 20px;
+    }
+    .item {
+      border: 1px solid green;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <h1>Welcome to Bubble Delegation</h1>
+    <section>
+      <ol id="item-container" class="item-container">
+        <li class="item">item-1</li>
+        <li class="item">item-2</li>
+        <li class="item">item-3</li>
+        <li class="item">item-4</li>
+        <li class="item">item-5</li>
+      </ol>
+      <button id="btn-add">Add new Item</button>
+    </section>
+    <script>
+      // const parent = document.getElementById("item-container");
+      // parent.addEventListener("click", function (event) {
+      //   if ((event.target.classList.contain = "item")) {
+      //     parent.removeChild(event.target);
+      //   }
+      // });
+
+      // every item set addEventListener we avoid this
+      // const items = document.getElementsByClassName("item");
+      // for (const item of items) {
+      //   item.addEventListener("click", function (event) {
+      //     event.target.parentNode.removeChild(event.target);
+      //   });
+      // }
+
+      // set addEventListener on the parentNode
+      document
+        .getElementById("item-container")
+        .addEventListener("click", function (e) {
+          e.target.parentNode.removeChild(e.target);
+        });
+
+      const addNew = document
+        .getElementById("btn-add")
+        .addEventListener("click", function () {
+          const itemContainer = document.getElementById("item-container");
+          const newItem = document.createElement("li");
+          newItem.innerText = "brand new item";
+          newItem.classList.add("item");
+          itemContainer.appendChild(newItem);
+        });
+    </script>
+  </body>
+</html>
